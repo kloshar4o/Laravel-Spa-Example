@@ -1,0 +1,141 @@
+{
+  "menu": {
+    "admin": "Admin",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+  "breadcrumb": {
+    "admin": "Admin",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "profile-settings": "Settings",
+    "profile-password": "Password",
+    "dashboard-settings": "Settings",
+    "dashboard-overview": "Overview",
+    "dashboard-addresses": "Addresses",
+    "dashboard-address": {
+      "edit": "Edit User",
+      "add": "Add User"
+    },
+    "dashboard-users": "Users",
+    "dashboard-user": {
+      "edit": "Edit User",
+      "add": "Add User"
+    },
+    "admin-overview": "Overview",
+    "admin-users": "Users",
+    "admin-user": {
+      "edit": "Edit User",
+      "add": "Add User"
+    },
+    "admin-companies": "Companies",
+    "admin-company": {
+      "edit": "Edit Company",
+      "add": "Add Company"
+    },
+    "dashboard-companies": {
+      "edit": "Edit Company",
+      "add": "Add Company"
+    }
+  },
+  "profile": {
+    "settings": "Settings",
+    "password": "Password"
+  },
+  "dashboard": {
+    "users": "Users",
+    "user": {
+      "edit": "Edit User Form",
+      "add": "Add User Form"
+    },
+    "address": {
+      "edit": "Edit Address Form",
+      "add": "Add Address Form"
+    },
+    "addresses": "Addresses",
+    "overview": "Overview",
+    "settings": "Settings"
+  },
+  "admin": {
+    "users": "Users",
+    "user": {
+      "edit": "Edit User Form",
+      "add": "Add User Form"
+    },
+    "companies": "Companies",
+    "company": {
+      "edit": "Edit Company Form",
+      "add": "Add Company Form"
+    },
+    "overview": "Overview",
+    "settings": "Settings"
+  },
+  "button": {
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "dashboard": "Dashboard",
+    "update": "Update"
+  },
+  "alert": {
+    "password_updated": "Your password has been updated!",
+    "info_updated": "Your info has been updated!",
+    "info_error": "There were some problems with your input.",
+    "you_are_logged_in": "You are logged in!",
+    "error_alert_title": "Oops...",
+    "error_alert_text": "Something went wrong! Please try again.",
+    "token_expired_alert_title": "Session Expired!",
+    "token_expired_alert_text": "Please log in again to continue.",
+    "unauthorized": "This action is unauthorized",
+    "empty_pagination_page": "This page is empty, please choose another one",
+    "type_to_search": "Type to search"
+  },
+  "auth": {
+    "login": "Log In",
+    "register": "Register",
+    "forgot_password": "Forgot Your Password?",
+    "confirm_password": "Confirm Password"
+  },
+  "404": {
+    "page_not_found": "Page Not Found",
+    "go_home": "Go Home"
+  },
+  "user": {
+    "first_name": "First name",
+    "last_name": "Last name",
+    "email": "Email",
+    "your_info": "Your Info",
+    "your_password": "Your Password",
+    "settings": "Settings"
+  },
+  "company": {
+    "company_name": "Company Name",
+    "company_status": "Company Status"
+  },
+  "input": {
+    "search": "Search",
+    "email": "Email",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "role": "Role",
+    "company_id": "Company",
+    "new_password": "New Password",
+    "password": "Password",
+    "reset_password": "Reset Password",
+    "remember_me": "Remember Me",
+    "your_password": "Your Password",
+    "password_confirmation": "Confirm Password",
+    "company_name": "Name",
+    "company_status": "Status",
+    "remember": "Remember Me",
+    "country": "Country",
+    "city": "City",
+    "town": "Town",
+    "street_address": "Street Address",
+    "state": "State",
+    "zip": "Post Code"
+  },
+  "header": {
+    "toggle_navigation": "Toggle navigation"
+  }
+}
