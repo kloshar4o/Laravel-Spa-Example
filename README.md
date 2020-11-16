@@ -9,13 +9,14 @@ Download or clone repo
 ### Local environment 
 Navigate to `src` folder
 
-`composer install`
-
-`npm install && npm run dev`
-
 Setup database values in `.env` 
 
+`composer install`
+
 `php artisan migrate --seed`
+
+Done.
+
 
 ### Docker
 
@@ -44,10 +45,7 @@ Navigate to `src` folder
 
 `composer install`
 
-`npm install && npm run dev`
-
 `php artisan migrate --seed`
-
 
 Done
 
@@ -62,11 +60,10 @@ this will install  **nginx**, **mysql**, **php**, **composer**, **npm** and **ar
 
 `docker-compose run --rm composer install`
 
-`docker-compose run --rm npm install && npm run dev`
-
 `docker-compose run --rm  artisan migrate --seed`
 
 Done
+
 
 ----
 
@@ -115,3 +112,12 @@ Admin has additional views, for viewing all the **companies** and all the **user
 Login: `admin@admin.com`
 
 Password: `admin`
+
+
+## Developers
+
+Installing dependencies: `npm install` or with docker `docker-compose run --rm npm install`
+
+Hot reload: `npm run hot` or with docker `docker-compose run --rm npm run hot`
+
+Build: `npm run dev` or with docker `docker-compose run --rm npm run dev`
