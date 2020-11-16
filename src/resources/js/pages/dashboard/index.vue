@@ -37,12 +37,6 @@ export default {
   },
 
   async beforeRouteEnter(to, from, next) {
-    if (
-      store.getters.company_id &&
-      store.getters.company &&
-      store.getters.company.id === store.getters.company_id
-    ) next()
-
     await store.dispatch('fetchCompany')
     next()
   }

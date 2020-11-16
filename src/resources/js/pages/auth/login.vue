@@ -60,14 +60,21 @@ export default {
     redirect() {
       const intendedUrl = Cookies.get('intended_url')
 
-      const path_name = store.getters.is_admin ? 'admin' : 'dashboard';
-
-      if (intendedUrl)
+      if (intendedUrl) {
+        Cookies.remove('intended_url')
         this.$router.push({path: intendedUrl})
-      else
-        this.$router.push({name: path_name})
+      }
 
-      Cookies.remove('intended_url')
+      const to = {};
+      const {is_admin, user: {company_id}, is_client} = store.getters
+
+      to.name = is_admin ? 'admin' : 'dashboard';
+
+      if(is_client)
+        to.params = {company_id}
+
+      this.$router.push(to)
+
     }
   }
 }
