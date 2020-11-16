@@ -1,6 +1,6 @@
-##Installation 
+## Installation 
 
-###Local
+### Local
 Download or clone repo
 
 `git clone git@github.com:kloshar4o/crm.git`
@@ -19,7 +19,7 @@ Setup database values in `.env`
 
 `php artisan migrate --seed`
 
-###Docker
+### Docker
 
 To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
 
@@ -86,9 +86,9 @@ volumes:
   - ./mysql:/var/lib/mysql
 ```
 
-##Application description
+## Application description
 
-#####Client user:
+##### Client user:
 Every client user has a dedicated **company**, 
 where he can CRUD **users** and **addresses**, 
 related only to his **company** 
@@ -100,7 +100,7 @@ Password: `user`
 
 ----
 
-#####Admin user:
+##### Admin user:
 Admin has all the above client user capabilities, as also can CRUD **companies**.
 Admin has additional views, for viewing all the **companies** and all the **users**. 
 
