@@ -23,6 +23,14 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/do
 
 ---
 
+Make sure you are not using ports for something else, if you do, change the ports in `docker-compose.yml`
+
+    nginx - :8080
+    mysql - :3306
+    php - :9000
+
+---
+
 If you already have **php** (7.4+), **composer** and **npm**, run:
 
 `docker-compose up -d --build site`
