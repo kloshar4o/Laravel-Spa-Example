@@ -23,11 +23,13 @@ To get started, make sure you have [Docker installed](https://docs.docker.com/do
 
 ---
 
-Make sure you are not using ports for something else, if you do, change the ports in `docker-compose.yml`
+Make sure these ports are free:
 
     nginx - :8080
     mysql - :3306
     php - :9000
+
+If they are not, change them in `docker-compose.yml`
 
 ---
 
