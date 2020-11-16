@@ -1,14 +1,12 @@
+
+
 ## Installation 
 
-### Local
 Download or clone repo
 
 `git clone git@github.com:kloshar4o/crm.git`
 
-`cd crm`
-
----
-
+### Local environment 
 Navigate to `src` folder
 
 `composer install`
