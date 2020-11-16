@@ -1,0 +1,11 @@
+import home from "~/pages/home";
+import login from "~/pages/auth/login";
+import _404 from "~/pages/errors/404"
+
+const public_routes = [
+    {path: '/', name: 'home', component: home},
+    {path: '/auth/login', name: 'auth.login', component: login},
+    {path: '*', component: _404}
+]
+
+export default public_routes
