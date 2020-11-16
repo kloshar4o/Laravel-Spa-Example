@@ -1,5 +1,5 @@
 <template>
-  <div class="row" v-if="!user.company_id">
+  <div class="row" v-if="user && !user.company_id">
 
     <div class="col-md-3">
       <side-menu :menu="admin_menu" :title="$t('menu.admin')"/>

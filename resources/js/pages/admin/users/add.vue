@@ -35,7 +35,7 @@ export default {
       {name: 'first_name', type: 'text'},
       {name: 'last_name', type: 'text'},
       {name: 'email', type: 'email'},
-      {name: 'company_id', type: 'select'},
+      {name: 'company_id', type: 'search', label: 'company_name'},
       {name: 'role', type: 'radio', options: store.getters.roles},
       {name: 'password', type: 'password'},
       {name: 'password_confirmation', type: 'password'},

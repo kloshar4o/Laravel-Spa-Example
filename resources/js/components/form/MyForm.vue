@@ -166,6 +166,7 @@ export default {
       this.$forceUpdate()
     },
     onSearch(label, name, search, search_loading) {
+      if(!search) return
       search_loading(true);
       this.search(label, name, search_loading, search, this);
     },
