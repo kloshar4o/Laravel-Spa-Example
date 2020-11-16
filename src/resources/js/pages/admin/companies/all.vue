@@ -20,14 +20,17 @@
       <tr v-for="(company, key) in companies" :key="key">
         <th class="text-right">{{ company.id }}</th>
         <td>
-          <a @click="goToCompany(company.id)" role="button"
-            class="text-primary">
+          <router-link :to="companyLink(company.id)"
+                       role="button"
+                       class="text-primary">
             {{ company.company_name }}
-          </a>
+          </router-link>
         </td>
         <td class="text-center">{{ company.company_status }}</td>
         <td class="text-center">
-          <fa icon="cog" class="mr-2 text-primary" @click="goToCompanySettings(company.id)" role="button"/>
+          <router-link :to="companySettingsLink(company.id)">
+            <fa icon="cog" class="mr-2 text-primary"/>
+          </router-link>
           <fa icon="trash" class="text-danger" @click="destroy(company.id)" role="button"/>
         </td>
       </tr>
@@ -76,10 +79,6 @@ export default {
   components: {Card},
 
   methods: {
-    goToCompany(id) {
-      store.commit("SET_COMPANY_ID", id)
-      router.push({name: 'dashboard'})
-    },
     goToCompanySettings(id) {
       store.commit('SET_COMPANY_ID', id)
       router.push({name: 'dashboard.settings'})
@@ -98,6 +97,12 @@ export default {
   },
 
   computed: {
+    companyLink() {
+      return company_id => ({name: 'dashboard.overview', params: {company_id}})
+    },
+    companySettingsLink() {
+      return company_id => ({name: 'dashboard.settings', params: {company_id}})
+    },
     ...mapGetters(['companies', 'companies_meta'])
   },
 

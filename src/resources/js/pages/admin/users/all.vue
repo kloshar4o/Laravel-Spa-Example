@@ -24,7 +24,9 @@
         <td>{{ user.last_name }}</td>
         <td>{{ user.email }}</td>
         <td class="text-center">
-          <fa icon="building" class="mr-2 text-primary" @click="goToCompany(user.company_id)" role="button"/>
+          <router-link :to="companyLink(user.company_id)">
+            <fa icon="building" class="mr-2 text-primary"/>
+          </router-link>
           <fa icon="pen" class="mr-2 text-primary" @click="edit(user)" role="button"/>
           <fa icon="trash" class="text-danger" @click="destroy(user.id)" role="button"/>
         </td>
@@ -33,7 +35,7 @@
     </table>
 
     <div v-else class="alert alert-warning" role="alert">
-      {{$t('alert.empty_pagination_page')}}
+      {{ $t('alert.empty_pagination_page') }}
     </div>
 
     <template v-if="users_meta" v-slot:footer>
@@ -74,10 +76,6 @@ export default {
   components: {Card},
 
   methods: {
-    goToCompany(id){
-      store.commit("SET_COMPANY_ID", id)
-      router.push({name: 'dashboard'})
-    },
     edit(data) {
       store.commit('UPDATE_USER_EDIT', data)
       router.push({name: 'admin.user.edit', params: {id: data.id}})
@@ -86,7 +84,7 @@ export default {
       const page = this.getPage()
       store.dispatch('deleteUser', {id, page})
     },
-    getPage(url = location.href){
+    getPage(url = location.href) {
       return new URL(url).searchParams.get('page') || 1
     },
     goTo(url) {
@@ -96,6 +94,9 @@ export default {
   },
 
   computed: {
+    companyLink() {
+      return company_id => ({name: 'dashboard.users', params: {company_id}})
+    },
     ...mapGetters(['users', 'users_meta'])
   },
 

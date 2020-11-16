@@ -18,8 +18,17 @@ if (mix.inProduction()) {
 } else {
   mix.sourceMaps()
 }
+mix.options({
+  hmrOptions: {
+    host: 'localhost',
+    port: '3000'
+  },
+});
 
 mix.webpackConfig({
+  devServer: {
+    port: '3000'
+  },
   plugins: [
     // new BundleAnalyzerPlugin()
   ],

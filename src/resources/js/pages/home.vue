@@ -2,8 +2,8 @@
   <div>
     <div class="top-right links">
       <template v-if="check_auth">
-        <router-link :to="{ name: 'dashboard' }">
-          {{ $t('button.dashboard') }}
+        <router-link :to="{ name: app_link }">
+          {{ $t('menu.' + app_link) }}
         </router-link>
       </template>
       <template v-else>
@@ -23,6 +23,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import store from "~/store";
 
 
 export default {
@@ -32,7 +33,12 @@ export default {
     title: window.config.app_name
   }),
 
-  computed: mapGetters(['check_auth']),
+  computed: {
+    ...mapGetters(['check_auth']),
+    app_link: () => {
+      return store.getters.is_admin ? 'admin' : 'dashboard'
+    }
+  },
 
 }
 </script>
