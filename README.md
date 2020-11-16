@@ -9,9 +9,9 @@ Download or clone repo
 ### Local environment 
 Navigate to `src` folder
 
-Setup database values in `.env` 
-
 `composer install`
+
+Setup database connection values in `.env` and run migration:
 
 `php artisan migrate --seed`
 
@@ -19,10 +19,6 @@ Done.
 
 
 ### Docker
-
-To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
-
----
 
 Make sure these ports are free:
 
@@ -34,11 +30,11 @@ If they are not, change them in `docker-compose.yml`
 
 ---
 
-If you already have **php** (7.4+), **composer** and **npm**, run:
+If you already have **php** (7.4+), **composer**, run:
 
 `docker-compose up -d --build site`
 
-this will install  **nginx**, **mysql**, **php**
+this will bring up **nginx**, **mysql** and **php** containers
 
 
 Navigate to `src` folder
@@ -51,12 +47,11 @@ Done
 
 ----
 
-If you don't have **php** (7.4+), **composer** and **npm** installed locally run:
+If you don't have **php** (7.4+) and **composer** installed locally run:
 
 `docker-compose up -d --build`
 
-this will install  **nginx**, **mysql**, **php**, **composer**, **npm** and **artisan**
-
+additional containers are included **composer**, **npm** and **artisan** as well us the above **nginx**, **mysql** and **php**
 
 `docker-compose run --rm composer install`
 
@@ -92,6 +87,8 @@ volumes:
 ```
 
 ## Application description
+
+If installed via **Docker** the application will run on http://localhost:8080/ by default 
 
 ##### Client user:
 Every client user has a dedicated **company**, 
